@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Typography Showcase</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Typography Showcase</h1>
+        <div class="font-controls">
+            <div class="font-selector">
+                <label for="fontSelect">Select Font:</label>
+                <select id="fontSelect"></select>
+            </div>
+            <div class="font-size-selector">
+                <label for="fontSizeSelect">Font Size:</label>
+                <select id="fontSizeSelect"></select>
+            </div>
+            <div class="text-format-selector">
+                <label for="textFormatSelect">Text Format:</label>
+                <select id="textFormatSelect">
+                    <option value="normal">Normal</option>
+                    <option value="italic">Italic</option>
+                    <option value="bold">Bold</option>
+                    <option value="underline">Underline</option>
+                    <option value="highlight">Highlight (Yellow)</option>
+                    <option value="strikethrough">Strikethrough</option>
+                    <option value="bold-italic">Bold & Italic</option>
+                </select>
+            </div>
+        </div>
+        <div class="text-input">
+            <label for="textInput">Type your text:</label>
+            <textarea id="textInput" rows="4" cols="50"></textarea>
+        </div>
+        <div class="text-display">
+            <p id="displayText">Your typed text will appear here.</p>
+        </div>
+        <button id="copyButton">Copy Text</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
