@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+}
+
+.title {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.font-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font-selector,
+.font-size-selector,
+.text-format-selector {
+    flex: 1;
+    margin: 10px;
+}
+
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#displayText {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+#copyButton {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background-color: #0056b3;
+}
