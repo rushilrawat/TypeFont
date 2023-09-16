@@ -1,7 +1,10 @@
+// script.js
 document.addEventListener("DOMContentLoaded", function () {
     const fontSelect = document.getElementById("fontSelect");
     const fontSizeSelect = document.getElementById("fontSizeSelect");
     const textFormatSelect = document.getElementById("textFormatSelect");
+    const highlightColorSelector = document.querySelector(".highlight-color-selector");
+    const highlightColorSelect = document.getElementById("highlightColorSelect");
     const textInput = document.getElementById("textInput");
     const displayText = document.getElementById("displayText");
     const copyButton = document.getElementById("copyButton");
@@ -99,42 +102,55 @@ document.addEventListener("DOMContentLoaded", function () {
                 displayText.style.fontWeight = "normal";
                 displayText.style.textDecoration = "none";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             case "italic":
                 displayText.style.fontStyle = "italic";
                 displayText.style.fontWeight = "normal";
                 displayText.style.textDecoration = "none";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             case "bold":
                 displayText.style.fontStyle = "normal";
                 displayText.style.fontWeight = "bold";
                 displayText.style.textDecoration = "none";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             case "underline":
                 displayText.style.fontStyle = "normal";
                 displayText.style.fontWeight = "normal";
                 displayText.style.textDecoration = "underline";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             case "highlight":
                 displayText.style.fontStyle = "normal";
                 displayText.style.fontWeight = "normal";
                 displayText.style.textDecoration = "none";
-                displayText.style.backgroundColor = "yellow";
+                // Show the Highlight Color dropdown
+                highlightColorSelector.style.display = "block";
                 break;
             case "strikethrough":
                 displayText.style.fontStyle = "normal";
                 displayText.style.fontWeight = "normal";
                 displayText.style.textDecoration = "line-through";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             case "bold-italic":
                 displayText.style.fontStyle = "italic";
                 displayText.style.fontWeight = "bold";
                 displayText.style.textDecoration = "none";
                 displayText.style.backgroundColor = "transparent";
+                // Hide the Highlight Color dropdown
+                highlightColorSelector.style.display = "none";
                 break;
             default:
                 break;
@@ -157,6 +173,12 @@ document.addEventListener("DOMContentLoaded", function () {
     textInput.addEventListener("input", function () {
         const inputText = textInput.value;
         displayText.textContent = inputText;
+    });
+
+    // Apply selected highlight color to the displayed text
+    highlightColorSelect.addEventListener("change", function () {
+        const selectedColor = highlightColorSelect.value;
+        displayText.style.backgroundColor = selectedColor;
     });
 
     // Copy text to clipboard when the "Copy Text" button is clicked
