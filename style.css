@@ -4,18 +4,26 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
     min-height: 100vh;
 }
 
 .container {
-    max-width: 800px;
+    flex: 1;
+    max-width: 1500px;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+}
+
+.text-input {
+    margin-bottom: 10px; /* Add margin to create spacing */
+}
+
+.highlight-color-selector {
+    margin-top: 10px; /* Add margin to create spacing */
 }
 
 .title {
@@ -32,7 +40,8 @@ body {
 
 .font-selector,
 .font-size-selector,
-.text-format-selector {
+.text-format-selector,
+.highlight-color-selector {
     flex: 1;
     margin: 10px;
 }
@@ -40,7 +49,6 @@ body {
 select,
 textarea {
     width: 100%;
-    padding: 10px;
     font-size: 16px;
 }
 
@@ -64,4 +72,11 @@ textarea {
 
 #copyButton:hover {
     background-color: #0056b3;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #D3D3D3;
+    color: #fff;
 }
