@@ -8,7 +8,9 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">Typography Showcase</h1>
+        <h1 class="title">
+            <a href="https://github.com/RushR2005/TypeFont" target="_blank">TypeFont
+            <a>: Typography Showcase </h1>
         <div class="font-controls">
             <div class="font-selector">
                 <label for="fontSelect">Select Font:</label>
@@ -25,12 +27,25 @@
                     <option value="italic">Italic</option>
                     <option value="bold">Bold</option>
                     <option value="underline">Underline</option>
-                    <option value="highlight">Highlight (Yellow)</option>
+                    <option value="highlight">Highlight</option>
                     <option value="strikethrough">Strikethrough</option>
                     <option value="bold-italic">Bold & Italic</option>
                 </select>
             </div>
         </div>
+
+        <!-- Add the Highlight Color dropdown below the other dropdowns -->
+        <div class="highlight-color-selector" style="display: none;">
+            <label for="highlightColorSelect">Highlight Color:</label>
+            <select id="highlightColorSelect">
+                <option value="#ffff00">Yellow</option>
+                <option value="#ff0000">Red</option>
+                <option value="#00ff00">Green</option>
+                <option value="#0000ff">Blue</option>
+                <!-- Add more color options as needed -->
+            </select>
+        </div>
+
         <div class="text-input">
             <label for="textInput">Type your text:</label>
             <textarea id="textInput" rows="4" cols="50"></textarea>
@@ -40,6 +55,10 @@
         </div>
         <button id="copyButton">Copy Text</button>
     </div>
+    <footer class="footer">
+        <a href="https://madewithlove.org.in" target="_blank">Made with <span aria-label="Love" style="color: #f43f5e">&hearts;</span> in India</a>
+        <a href="https://github.com/RushR2005/" target="_blank"> <span style="color: #000000">by Rushil</a>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
