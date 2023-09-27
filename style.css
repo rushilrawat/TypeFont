@@ -1,82 +1,91 @@
+/* CSS variables */
+$font-size-heading: 36px;
+$font-size-body: 18px;
+
+/* CSS classes and IDs */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .container {
-    flex: 1;
-    max-width: 1500px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    background-color: #fff;
+  flex: 1;
+  max-width: 1500px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
-.text-input {
-    margin-bottom: 10px; /* Add margin to create spacing */
+.input-field {
+  margin-bottom: 10px; /* Add margin to create spacing */
 }
 
-.highlight-color-selector {
-    margin-top: 10px; /* Add margin to create spacing */
+.highlight-color-picker {
+  margin-top: 10px; /* Add margin to create spacing */
 }
 
 .title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
+  font-size: $font-size-heading;
+  color: #333;
+  margin-bottom: 20px;
 }
 
 .font-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .font-selector,
 .font-size-selector,
 .text-format-selector,
-.highlight-color-selector {
-    flex: 1;
-    margin: 10px;
+.highlight-color-picker {
+  flex: 1;
+  margin: 10px;
 }
 
 select,
 textarea {
-    width: 100%;
-    font-size: 16px;
+  width: 100%;
+  font-size: 16px;
 }
 
 #displayText {
-    font-size: 18px;
-    font-weight: normal;
-    font-style: normal;
-    text-decoration: none;
-    background-color: transparent;
+  font-size: $font-size-body;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  background-color: transparent;
 }
 
 #copyButton {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 #copyButton:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #D3D3D3;
-    color: #fff;
+  text-align: center;
+  padding: 11px;
+  position: relative;
+  margin: 8px;
+  border-radius: 4%;
+  background-color: #D3D3D3;
+  color: #fff;
+  flex: 0 0 auto;
 }
