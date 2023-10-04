@@ -1,11 +1,16 @@
 /* CSS variables */
-$font-size-heading: 36px;
-$font-size-body: 18px;
+:root {
+  --font-size-heading: 36px;
+  --font-size-body: 18px;
+  --font-family: Arial, sans-serif;
+  --background-color: #f0f0f0;
+  --highlight-color: #007bff;
+}
 
 /* CSS classes and IDs */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
   display: flex;
@@ -32,7 +37,7 @@ body {
 }
 
 .title {
-  font-size: $font-size-heading;
+  font-size: var(--font-size-heading);
   color: #333;
   margin-bottom: 20px;
 }
@@ -58,7 +63,7 @@ textarea {
 }
 
 #displayText {
-  font-size: $font-size-body;
+  font-size: var(--font-size-body);
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
@@ -66,7 +71,7 @@ textarea {
 }
 
 #copyButton {
-  background-color: #007bff;
+  background-color: var(--highlight-color);
   color: #fff;
   border: none;
   padding: 10px 20px;
@@ -88,4 +93,42 @@ textarea {
   background-color: #D3D3D3;
   color: #fff;
   flex: 0 0 auto;
+}
+
+/* Advanced CSS */
+
+/* Add a subtle gradient to the background color of the container */
+.container {
+  background: linear-gradient(90deg, #ffffff 0%, #f6f6f6 100%);
+}
+
+/* Add a box shadow to the input fields */
+.input-field {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Add a subtle border to the display text area */
+#displayText {
+  border: 1px solid #ccc;
+}
+
+/* Add a hover effect to the copy button */
+#copyButton:hover {
+  transform: scale(1.1);
+}
+
+/* Add a drop shadow to the footer */
+.footer {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a media query to adjust the layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .font-controls {
+    flex-direction: column;
+  }
 }
