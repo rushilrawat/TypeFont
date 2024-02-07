@@ -59,9 +59,8 @@ document.addEventListener("DOMContentLoaded", function () {
     zalgoComplexityInput.addEventListener("input", function () {
         applyZalgo();
     });
-
-  // Populate the font dropdown with available fonts (including the previous ones)
-  const fonts = [
+    // Populate the font dropdown with available fonts (including the previous ones)
+    const fonts = [
     "Arial, sans-serif",
     "Georgia, serif",
     "Courier New, monospace",
