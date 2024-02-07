@@ -102,6 +102,17 @@ textarea {
 }
 
 /* Advanced CSS */
+/* styles for the Zalgo Complexity container */
+
+#zalgoComplexityContainer {
+    margin-top: 10px;
+    display: none;
+}
+
+#zalgoComplexityContainer label {
+    margin-right: 5px;
+}
+
 
 /* Add a subtle gradient to the background color of the container */
 .container {
