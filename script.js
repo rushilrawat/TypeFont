@@ -31,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 const randomZalgoChar = zalgoChars[Math.floor(Math.random() * zalgoChars.length)];
                 zalgoText += randomZalgoChar;
             }
+        }
+        return zalgoText;
     }
 
     // Event listener for the text format dropdown
@@ -52,7 +54,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 break;
         }
     });
-    
+
+    // Event listener for the Zalgo Complexity input
+    zalgoComplexityInput.addEventListener("input", function () {
+        applyZalgo();
+    });
+
   // Populate the font dropdown with available fonts (including the previous ones)
   const fonts = [
     "Arial, sans-serif",
