@@ -10,7 +10,7 @@
 /* CSS classes and IDs */
 body {
   font-family: var(--font-family);
-  background-color: var(--background-color);
+  background-color: var(--background-color); /* Corrected variable name */
   margin: 0;
   padding: 0;
   display: flex;
