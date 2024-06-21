@@ -7,10 +7,17 @@
     <title>Typography Showcase</title>
 </head>
 <body>
+    <div class="dark-mode-toggle">
+        <input type="checkbox" id="darkModeSwitch" class="dark-mode-checkbox">
+        <label for="darkModeSwitch" class="dark-mode-label">
+            <span class="dark-mode-inner"></span>
+            <span class="dark-mode-switch"></span>
+        </label>
+    </div>
     <div class="container">
         <h1 class="title">
-            <a href="https://github.com/RushR2005/TypeFont" target="_blank">TypeFont
-            <a>: Typography Showcase </h1>
+            <a href="https://github.com/RushR2005/TypeFont" target="_blank">TypeFont</a>: Typography Showcase
+        </h1>
         <div class="font-controls">
             <div class="font-selector">
                 <label for="fontSelect">Select Font:</label>
@@ -36,11 +43,9 @@
                     <label for="zalgoComplexity">Zalgo Complexity:</label>
                     <input type="number" id="zalgoComplexity" min="1" max="10" value="4">
                 </div>
-
             </div>
         </div>
 
-        <!-- Add the Highlight Color dropdown below the other dropdowns -->
         <div class="highlight-color-selector" style="display: none;">
             <label for="highlightColorSelect">Highlight Color:</label>
             <select id="highlightColorSelect">
@@ -48,7 +53,6 @@
                 <option value="#ff0000">Red</option>
                 <option value="#00ff00">Green</option>
                 <option value="#0000ff">Blue</option>
-                <!-- Add more color options as needed -->
             </select>
         </div>
 
