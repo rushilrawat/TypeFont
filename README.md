@@ -9,6 +9,6 @@ Explore this typography showcase, featuring over 40 fonts with a wide range of s
 - v1.2: Added mobily compatibility
 - v1.3: Added multiple colors in highlight text option
 - v1.4: Introducing new feature: Zalgo Text and Zalgo text complexity box (February '24)
-- v1.5: Dark mode
+- v1.5: Dark mode (June '24)
 
 there is some error with zalgo text complexity box & dark mode, will fix afterwards
