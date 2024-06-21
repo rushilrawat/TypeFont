@@ -1,21 +1,36 @@
-/* CSS variables */
 :root {
   --font-size-heading: 36px;
   --font-size-body: 18px;
   --font-family: Arial, sans-serif;
   --background-color: #f0f0f0;
   --highlight-color: #007bff;
+  --dark-background-color: #121212;
+  --dark-text-color: #e0e0e0;
+  --dark-container-color: #1e1e1e;
 }
 
-/* CSS classes and IDs */
 body {
   font-family: var(--font-family);
-  background-color: var(--background-color); /* Corrected variable name */
+  background-color: var(--background-color);
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .container {
+  background-color: var(--dark-container-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .footer {
+  background-color: #333;
 }
 
 .container {
@@ -25,15 +40,12 @@ body {
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #fff;
+  background: linear-gradient(90deg, #ffffff 0%, #f6f6f6 100%);
 }
 
 .input-field {
-  margin-bottom: 10px; /* Add margin to create spacing */
-}
-
-.highlight-color-picker {
-  margin-top: 10px; /* Add margin to create spacing */
+  margin-bottom: 10px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .title {
@@ -51,7 +63,7 @@ body {
 .font-selector,
 .font-size-selector,
 .text-format-selector,
-.highlight-color-picker {
+.highlight-color-selector {
   flex: 1;
   margin: 10px;
 }
@@ -68,9 +80,8 @@ textarea {
   font-style: normal;
   text-decoration: none;
   background-color: transparent;
-  border: 1px solid #ccc; /* Add a subtle border to the display text area */
-  padding: 10px; /* Add some padding for better appearance */
-  
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
 #copyButton {
@@ -81,12 +92,12 @@ textarea {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Add a smooth transform animation on hover */
+  transition: transform 0.3s ease-in-out;
 }
 
 #copyButton:hover {
   background-color: #0056b3;
-  transform: scale(1.1); /* Scale up the button slightly on hover */
+  transform: scale(1.1);
 }
 
 .footer {
@@ -98,33 +109,65 @@ textarea {
   background-color: #D3D3D3;
   color: #fff;
   flex: 0 0 auto;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add a drop shadow to the footer */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-/* Advanced CSS */
-/* styles for the Zalgo Complexity container */
+.dark-mode-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.dark-mode-checkbox {
+  display: none;
+}
+
+.dark-mode-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 60px;
+  height: 30px;
+  background: var(--highlight-color);
+  border-radius: 30px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.dark-mode-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.dark-mode-switch {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+.dark-mode-checkbox:checked + .dark-mode-label .dark-mode-switch {
+  transform: translateX(30px);
+}
 
 #zalgoComplexityContainer {
-    margin-top: 10px;
-    display: none;
+  margin-top: 10px;
+  display: none;
 }
 
 #zalgoComplexityContainer label {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
-
-/* Add a subtle gradient to the background color of the container */
-.container {
-  background: linear-gradient(90deg, #ffffff 0%, #f6f6f6 100%);
-}
-
-/* Add a box shadow to the input fields */
-.input-field {
-  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Add a media query to adjust the layout for smaller screens */
 @media screen and (max-width: 768px) {
   .container {
     max-width: 100%;
