@@ -1,14 +1,82 @@
-# TypeFont : Typography Showcase
+# TypeFont v2.0 - Typography Playground
 
-Explore this typography showcase, featuring over 40 fonts with a wide range of styling options including bold, italics, and strikethrough. You can also fine-tune the sizing from 8px to 96px. It's a versatile collection for all your design needs.
+Welcome to **TypeFont v2.0**, a modern, Neumorphic typography playground!
+
+🔹 Explore over **hundreds of fonts** dynamically loaded from **Google Fonts API**.
+
+🔹 Fine-tune your text with **bold**, **italic**, **underline**, **highlight**, **strikethrough**, and **Zalgo** effects.
+
+🔹 Switch between **Light** and **Dark** Neumorphic modes.
+
+🔹 Enjoy a smooth **live preview**, **word/character counter**, and **one-click copy** feature.
 
 
-##Version History
-- v1.0: Website launch (September '23)
-- v1.1: UI update: added footer, made the text input box of adjustable size
-- v1.2: Added mobily compatibility
-- v1.3: Added multiple colors in highlight text option
-- v1.4: Introducing new feature: Zalgo Text and Zalgo text complexity box (February '24)
-- v1.5: Dark mode (June '24)
+---
 
-there is some error with zalgo text complexity box & dark mode, will fix afterwards
+## 🚀 Features
+
+- 🎨 **Google Fonts Integration** (Dynamic)
+- 🖌️ **Neumorphic UI Design** (Light & Dark Mode)
+- 🌈 **Custom Color Picker** for highlight backgrounds
+- 🔥 **Live Zalgo Text Generator** with Complexity Slider
+- ✂️ **Copy Text Button** with Animated Confirmation
+- 📏 **Live Word and Character Counter**
+- 🔄 **Reset Button** to clear everything instantly
+- 📱 **Fully Responsive** on all devices
+- ⚡ **Smooth animations** and professional transitions
+
+
+---
+
+## 🛠️ Built With
+
+- HTML5
+- CSS3 (Flexbox, Transitions, Neumorphism)
+- Vanilla JavaScript (Fetch API, DOM Manipulation)
+- Google Fonts API
+
+
+---
+
+## 📸 Screenshots
+
+(Insert screenshots of your playground once hosted)
+
+
+---
+
+## 🔗 Live Demo
+
+(Insert GitHub Pages or Netlify link once you deploy!)
+
+
+---
+
+## 📜 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+
+---
+
+## 🙏 Acknowledgements
+
+- [Google Fonts Developer API](https://developers.google.com/fonts/docs/developer_api)
+- Inspired by modern typography tools and neumorphic design trends.
+
+
+---
+
+## 💬 Connect with Me
+
+- GitHub: [Rushil Rawat](https://github.com/RushR2005)
+- Made with ❤️ in India
+
+
+---
+
+> "Typography is the craft of endowing human language with a durable visual form." – Robert Bringhurst
+
+---
+
+### ✨ Proudly Built - TypeFont v2.0
