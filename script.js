@@ -1,4 +1,5 @@
 // script.js
+
 const fontSelect = document.getElementById("fontSelect");
 const fontSizeSelect = document.getElementById("fontSizeSelect");
 const textFormatSelect = document.getElementById("textFormatSelect");
@@ -20,7 +21,7 @@ if (localStorage.getItem("darkMode") === "enabled") {
 }
 
 // Toggle dark mode
-function toggleDarkMode() {
+darkModeSwitch.addEventListener("change", () => {
   if (darkModeSwitch.checked) {
     document.body.classList.add("dark-mode");
     localStorage.setItem("darkMode", "enabled");
@@ -28,9 +29,7 @@ function toggleDarkMode() {
     document.body.classList.remove("dark-mode");
     localStorage.setItem("darkMode", "disabled");
   }
-}
-
-darkModeSwitch.addEventListener("change", toggleDarkMode);
+});
 
 // Fetch Google Fonts API
 const apiKey = "AIzaSyATqPXjZzhE80CT4nl_aITBvJpJIV-OeDk";
@@ -56,8 +55,7 @@ async function loadFonts() {
 }
 
 loadFonts();
-
-// Font Size options
+// Populate font sizes
 [8, 12, 16, 20, 24, 28, 32, 36, 40, 48, 56, 64, 72, 80, 88, 96].forEach(size => {
   const option = document.createElement("option");
   option.value = `${size}px`;
@@ -75,7 +73,7 @@ function updateDisplay() {
   }
 }
 
-// Copy text function
+// Copy text to clipboard
 copyButton.addEventListener("click", () => {
   navigator.clipboard.writeText(displayText.textContent).then(() => {
     copyPopup.style.display = "block";
@@ -93,7 +91,7 @@ resetButton.addEventListener("click", () => {
   updateCounter();
 });
 
-// Update counter
+// Word and character counter
 function updateCounter() {
   const words = textInput.value.trim().split(/\s+/).filter(Boolean).length;
   const chars = textInput.value.length;
@@ -104,7 +102,7 @@ textInput.addEventListener("input", () => {
   updateDisplay();
   updateCounter();
 });
-
+// Font select
 fontSelect.addEventListener("change", () => {
   const selectedFont = fontSelect.value;
   const link = document.createElement("link");
@@ -114,14 +112,17 @@ fontSelect.addEventListener("change", () => {
   displayText.style.fontFamily = `'${selectedFont}', sans-serif`;
 });
 
+// Font size select
 fontSizeSelect.addEventListener("change", () => {
   displayText.style.fontSize = fontSizeSelect.value;
 });
 
+// Highlight color
 highlightColorInput.addEventListener("change", () => {
   displayText.style.backgroundColor = highlightColorInput.value;
 });
 
+// Text format select
 textFormatSelect.addEventListener("change", () => {
   const format = textFormatSelect.value;
   displayText.style.fontStyle = (format.includes("italic")) ? "italic" : "normal";
@@ -130,13 +131,18 @@ textFormatSelect.addEventListener("change", () => {
     format === "underline" ? "underline" :
     format === "strikethrough" ? "line-through" : "none";
 
-  zalgoComplexityContainer.style.display = (format === "zalgo") ? "block" : "none";
+  if (format === "zalgo") {
+    zalgoComplexityContainer.style.display = "block";
+  } else {
+    zalgoComplexityContainer.style.display = "none";
+  }
   updateDisplay();
 });
 
+// Zalgo complexity slider
 zalgoComplexitySlider.addEventListener("input", updateDisplay);
 
-// Generate Zalgo text
+// Zalgo text generator
 function generateZalgo(text, complexity) {
   const zalgoChars = ["̖","̗","̘","̙","̜","̝","̞","̟","̠","̤","̥","̦","̩","̪","̫","̬","̭","̮","̯","̰","̱","̲","̳","̹","̺","̻","̼","ͅ","͇","͈","͉","͍","͎","͓","͔","͕","͖","͙","͚","̣","̈","̩","̤","̥","̨","̧","̢","̡","̟","̜","̚"];
   return text.split("").map(char => {
