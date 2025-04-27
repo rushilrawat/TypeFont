@@ -1,4 +1,4 @@
-/* TypeFont v2.0 - Neumorphic Soft Design */
+/* TypeFont v2.0 - Neumorphic Professional Style */
 
 :root {
   --font-size-heading: 2.5rem;
@@ -32,7 +32,7 @@ body.dark-mode {
 
 .container {
   flex: 1;
-  margin: 80px auto 20px;
+  margin: 100px auto 20px;
   width: 90%;
   max-width: 1200px;
   padding: 2rem;
@@ -45,6 +45,10 @@ body.dark-mode {
 body.dark-mode .container {
   background: var(--container-dark);
   box-shadow: 8px 8px 20px #0a0a0a, -8px -8px 20px #292929;
+}
+
+.title {
+  text-align: center;
 }
 
 .title a {
@@ -61,8 +65,8 @@ body.dark-mode .title a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 select, textarea, input[type="color"], input[type="range"] {
@@ -71,9 +75,9 @@ select, textarea, input[type="color"], input[type="range"] {
   border-radius: 12px;
   border: none;
   box-shadow: inset 6px 6px 12px #bebebe, inset -6px -6px 12px #ffffff;
-  transition: box-shadow 0.3s;
   background: inherit;
   color: inherit;
+  transition: box-shadow 0.3s;
 }
 
 body.dark-mode select, 
@@ -81,6 +85,12 @@ body.dark-mode textarea,
 body.dark-mode input[type="color"],
 body.dark-mode input[type="range"] {
   box-shadow: inset 6px 6px 12px #0a0a0a, inset -6px -6px 12px #292929;
+}
+
+textarea {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
 }
 
 #displayText {
@@ -91,11 +101,7 @@ body.dark-mode input[type="range"] {
   font-size: var(--font-size-body);
   min-height: 80px;
   box-shadow: inset 8px 8px 15px #bebebe, inset -8px -8px 15px #ffffff;
-}
-
-textarea {
-  width: 100%;
-  resize: none;
+  transition: all 0.3s;
 }
 
 .button-group button {
@@ -106,7 +112,7 @@ textarea {
   font-size: 1rem;
   color: #fff;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .button-group button:hover {
@@ -122,7 +128,6 @@ textarea {
 .footer a {
   color: var(--primary-color);
   text-decoration: none;
-  margin: 0 10px;
 }
 
 .dark-mode-toggle {
@@ -133,7 +138,7 @@ textarea {
 
 #copyPopup {
   position: fixed;
-  top: 20px;
+  bottom: 90px;
   right: 20px;
   background: var(--primary-color);
   color: #fff;
@@ -141,6 +146,7 @@ textarea {
   border-radius: 8px;
   display: none;
   z-index: 1000;
+  animation: fade 1s forwards;
 }
 
 .counter {
@@ -150,15 +156,20 @@ textarea {
   color: gray;
 }
 
+@keyframes fade {
+  0% {opacity: 0;}
+  50% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 @media (max-width: 768px) {
   .font-controls, .button-group {
     flex-direction: column;
-    gap: 0.8rem;
+    align-items: center;
   }
 
   .container {
-    padding: 1rem;
-    margin-top: 60px;
+    padding: 1.5rem;
   }
 
   .title a {
